@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aliado Tecnológico | Soporte Técnico Profesional en Guatemala</title>
     <meta name="description" content="Aliado Tecnológico - Servicios profesionales de soporte técnico e infraestructura informática en Guatemala. Diagnóstico, mantenimiento, instalación y configuración para hogares, estudiantes y empresas.">
-    <meta name="keywords" content="soporte técnico Guatemala, reparación computadoras, aliado tecnológico, mantenimiento PC, instalación Windows, configuración redes, soporte remoto">
+    <meta name="keywords" content="soporte técnico Guatemala, aliado tecnológico, reparación computadoras, mantenimiento PC, instalación Windows, configuración redes, soporte remoto">
     <meta name="author" content="Aliado Tecnológico">
     <meta name="geo.region" content="GT">
     <meta name="geo.country" content="Guatemala">
@@ -17,7 +17,7 @@
     <meta property="og:locale" content="es_GT">
     <meta property="og:image" content="img/logo-og.png">
     
-    <!-- Favicon (se actualizará con tu logo) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/favicon.png">
     
@@ -29,11 +29,22 @@
     <header class="header" id="header">
         <div class="nav-container">
             <a href="#" class="logo" aria-label="Aliado Tecnológico - Ir al inicio">
-                <!-- LOGO: Reemplaza la imagen cuando la tengas -->
-                <img src="img/logo.png" alt="Aliado Tecnológico" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="logo-text-fallback" style="display: none;">
-                    <div class="logo-icon-fallback" aria-hidden="true">🤝</div>
-                    <div class="logo-text">Aliado<span>Tecnológico</span></div>
+                <img src="img/logo.png" 
+                     alt="Aliado Tecnológico" 
+                     class="logo-img"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                
+                <div class="logo-fallback" style="display: none;">
+                    <div class="logo-icon-box">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                    </div>
+                    <div class="logo-words">
+                        <span class="logo-word-1">ALIADO</span>
+                        <span class="logo-word-2">TECNOLÓGICO</span>
+                    </div>
                 </div>
             </a>
 
@@ -122,221 +133,80 @@
                     </p>
                 </div>
 
-                <!-- Pestañas de navegación de servicios -->
                 <div class="services-nav" role="tablist" aria-label="Categorías de servicios">
-                    <button class="service-tab active" onclick="openServiceTab(event, 'soporte')" role="tab" aria-selected="true" aria-controls="panel-soporte">
-                        💻 Soporte Técnico
-                    </button>
-                    <button class="service-tab" onclick="openServiceTab(event, 'mantenimiento')" role="tab" aria-selected="false" aria-controls="panel-mantenimiento">
-                        🔧 Mantenimiento
-                    </button>
-                    <button class="service-tab" onclick="openServiceTab(event, 'instalacion')" role="tab" aria-selected="false" aria-controls="panel-instalacion">
-                        🌐 Instalación
-                    </button>
-                    <button class="service-tab" onclick="openServiceTab(event, 'tecnologias')" role="tab" aria-selected="false" aria-controls="panel-tecnologias">
-                        🖥️ Tecnologías
-                    </button>
+                    <button class="service-tab active" onclick="openServiceTab(event, 'soporte')" role="tab" aria-selected="true" aria-controls="panel-soporte">💻 Soporte Técnico</button>
+                    <button class="service-tab" onclick="openServiceTab(event, 'mantenimiento')" role="tab" aria-selected="false" aria-controls="panel-mantenimiento">🔧 Mantenimiento</button>
+                    <button class="service-tab" onclick="openServiceTab(event, 'instalacion')" role="tab" aria-selected="false" aria-controls="panel-instalacion">🌐 Instalación</button>
+                    <button class="service-tab" onclick="openServiceTab(event, 'tecnologias')" role="tab" aria-selected="false" aria-controls="panel-tecnologias">🖥️ Tecnologías</button>
                 </div>
 
-                <!-- Contenido: Soporte Técnico -->
+                <!-- Soporte Técnico -->
                 <div class="service-content active" id="panel-soporte" role="tabpanel">
                     <h3 class="service-content-title">💻 Soporte Técnico Especializado</h3>
-                    <p class="service-content-desc">
-                        Ofrecemos asistencia técnica para la solución de problemas relacionados con hardware, software y conectividad.
-                    </p>
+                    <p class="service-content-desc">Ofrecemos asistencia técnica para la solución de problemas relacionados con hardware, software y conectividad.</p>
                     <div class="service-cards">
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🔍</div>
-                            <h4>Diagnóstico y reparación</h4>
-                            <p>Diagnóstico y reparación de fallas en computadoras de escritorio y portátiles.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">⚙️</div>
-                            <h4>Solución de errores</h4>
-                            <p>Solución de errores en sistemas operativos Windows y Linux.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🛡️</div>
-                            <h4>Eliminación de virus</h4>
-                            <p>Eliminación de virus, malware, spyware y software malicioso.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🚀</div>
-                            <h4>Optimización</h4>
-                            <p>Optimización y aceleración de equipos para mejor rendimiento.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">💾</div>
-                            <h4>Recuperación de sistemas</h4>
-                            <p>Recuperación básica de sistemas operativos dañados.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🖥️</div>
-                            <h4>Soporte remoto y presencial</h4>
-                            <p>Soporte remoto y presencial según la necesidad del cliente.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">👥</div>
-                            <h4>Configuración de usuarios</h4>
-                            <p>Configuración de usuarios, permisos y cuentas de sistema.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">📦</div>
-                            <h4>Respaldo de información</h4>
-                            <p>Respaldo y restauración de información importante.</p>
-                        </article>
+                        <article class="service-card"><div class="service-card-icon">🔍</div><h4>Diagnóstico y reparación</h4><p>Diagnóstico y reparación de fallas en computadoras de escritorio y portátiles.</p></article>
+                        <article class="service-card"><div class="service-card-icon">⚙️</div><h4>Solución de errores</h4><p>Solución de errores en sistemas operativos Windows y Linux.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🛡️</div><h4>Eliminación de virus</h4><p>Eliminación de virus, malware, spyware y software malicioso.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🚀</div><h4>Optimización</h4><p>Optimización y aceleración de equipos para mejor rendimiento.</p></article>
+                        <article class="service-card"><div class="service-card-icon">💾</div><h4>Recuperación de sistemas</h4><p>Recuperación básica de sistemas operativos dañados.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🖥️</div><h4>Soporte remoto y presencial</h4><p>Soporte remoto y presencial según la necesidad del cliente.</p></article>
+                        <article class="service-card"><div class="service-card-icon">👥</div><h4>Configuración de usuarios</h4><p>Configuración de usuarios, permisos y cuentas de sistema.</p></article>
+                        <article class="service-card"><div class="service-card-icon">📦</div><h4>Respaldo de información</h4><p>Respaldo y restauración de información importante.</p></article>
                     </div>
                 </div>
 
-                <!-- Contenido: Mantenimiento -->
+                <!-- Mantenimiento -->
                 <div class="service-content" id="panel-mantenimiento" role="tabpanel">
                     <h3 class="service-content-title">🔧 Mantenimiento Preventivo y Correctivo</h3>
-                    <p class="service-content-desc">
-                        Realizamos mantenimiento especializado para prolongar la vida útil de los equipos y mejorar su rendimiento.
-                    </p>
-
+                    <p class="service-content-desc">Realizamos mantenimiento especializado para prolongar la vida útil de los equipos y mejorar su rendimiento.</p>
                     <h4 class="service-subtitle">🟢 Mantenimiento Preventivo</h4>
                     <div class="service-cards">
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🧹</div>
-                            <h4>Limpieza de equipos</h4>
-                            <p>Limpieza interna y externa de equipos para evitar sobrecalentamiento.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🌡️</div>
-                            <h4>Cambio de pasta térmica</h4>
-                            <p>Cambio de pasta térmica en procesadores y tarjetas gráficas.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🌬️</div>
-                            <h4>Revisión de ventilación</h4>
-                            <p>Revisión de temperaturas y sistemas de ventilación.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">📀</div>
-                            <h4>Verificación de hardware</h4>
-                            <p>Verificación de disco duro y memoria RAM.</p>
-                        </article>
+                        <article class="service-card"><div class="service-card-icon">🧹</div><h4>Limpieza de equipos</h4><p>Limpieza interna y externa de equipos para evitar sobrecalentamiento.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🌡️</div><h4>Cambio de pasta térmica</h4><p>Cambio de pasta térmica en procesadores y tarjetas gráficas.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🌬️</div><h4>Revisión de ventilación</h4><p>Revisión de temperaturas y sistemas de ventilación.</p></article>
+                        <article class="service-card"><div class="service-card-icon">📀</div><h4>Verificación de hardware</h4><p>Verificación de disco duro y memoria RAM.</p></article>
                     </div>
-
                     <h4 class="service-subtitle">🔴 Mantenimiento Correctivo</h4>
                     <div class="service-cards">
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🔩</div>
-                            <h4>Reparación de hardware</h4>
-                            <p>Reparación de fallas de hardware detectadas.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🔄</div>
-                            <h4>Sustitución de componentes</h4>
-                            <p>Sustitución de componentes dañados por nuevos.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">⚠️</div>
-                            <h4>Problemas de arranque</h4>
-                            <p>Reparación de problemas de arranque del sistema.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🔬</div>
-                            <h4>Diagnóstico avanzado</h4>
-                            <p>Diagnóstico avanzado de equipos con fallas complejas.</p>
-                        </article>
+                        <article class="service-card"><div class="service-card-icon">🔩</div><h4>Reparación de hardware</h4><p>Reparación de fallas de hardware detectadas.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🔄</div><h4>Sustitución de componentes</h4><p>Sustitución de componentes dañados por nuevos.</p></article>
+                        <article class="service-card"><div class="service-card-icon">⚠️</div><h4>Problemas de arranque</h4><p>Reparación de problemas de arranque del sistema.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🔬</div><h4>Diagnóstico avanzado</h4><p>Diagnóstico avanzado de equipos con fallas complejas.</p></article>
                     </div>
                 </div>
 
-                <!-- Contenido: Instalación -->
+                <!-- Instalación -->
                 <div class="service-content" id="panel-instalacion" role="tabpanel">
                     <h3 class="service-content-title">🌐 Instalación y Configuración</h3>
-                    <p class="service-content-desc">
-                        Brindamos instalación y configuración profesional de sistemas, aplicaciones y redes.
-                    </p>
+                    <p class="service-content-desc">Brindamos instalación y configuración profesional de sistemas, aplicaciones y redes.</p>
                     <div class="service-cards">
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🪟</div>
-                            <h4>Sistemas Operativos</h4>
-                            <p>Instalación de sistemas operativos Windows y Linux.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">📎</div>
-                            <h4>Software empresarial</h4>
-                            <p>Instalación de paquetes de oficina y software empresarial.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🖨️</div>
-                            <h4>Periféricos</h4>
-                            <p>Configuración de impresoras y dispositivos periféricos.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">📶</div>
-                            <h4>Redes WiFi y LAN</h4>
-                            <p>Instalación y configuración de redes WiFi y cableadas.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🖧</div>
-                            <h4>Servidores</h4>
-                            <p>Configuración básica de servidores.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🔑</div>
-                            <h4>Acceso remoto</h4>
-                            <p>Configuración de acceso remoto seguro.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">📷</div>
-                            <h4>Cámaras de red</h4>
-                            <p>Instalación de cámaras y dispositivos de red.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🔒</div>
-                            <h4>Seguridad informática</h4>
-                            <p>Configuración de antivirus y seguridad informática.</p>
-                        </article>
+                        <article class="service-card"><div class="service-card-icon">🪟</div><h4>Sistemas Operativos</h4><p>Instalación de sistemas operativos Windows y Linux.</p></article>
+                        <article class="service-card"><div class="service-card-icon">📎</div><h4>Software empresarial</h4><p>Instalación de paquetes de oficina y software empresarial.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🖨️</div><h4>Periféricos</h4><p>Configuración de impresoras y dispositivos periféricos.</p></article>
+                        <article class="service-card"><div class="service-card-icon">📶</div><h4>Redes WiFi y LAN</h4><p>Instalación y configuración de redes WiFi y cableadas.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🖧</div><h4>Servidores</h4><p>Configuración básica de servidores.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🔑</div><h4>Acceso remoto</h4><p>Configuración de acceso remoto seguro.</p></article>
+                        <article class="service-card"><div class="service-card-icon">📷</div><h4>Cámaras de red</h4><p>Instalación de cámaras y dispositivos de red.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🔒</div><h4>Seguridad informática</h4><p>Configuración de antivirus y seguridad informática.</p></article>
                     </div>
                 </div>
 
-                <!-- Contenido: Tecnologías -->
+                <!-- Tecnologías -->
                 <div class="service-content" id="panel-tecnologias" role="tabpanel">
                     <h3 class="service-content-title">🖥️ Tecnologías y Herramientas</h3>
-                    <p class="service-content-desc">
-                        Trabajamos con diferentes plataformas y herramientas tecnológicas para garantizar soluciones eficientes.
-                    </p>
-
+                    <p class="service-content-desc">Trabajamos con diferentes plataformas y herramientas tecnológicas para garantizar soluciones eficientes.</p>
                     <h4 class="service-subtitle">Sistemas Operativos</h4>
                     <div class="service-cards">
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🪟</div>
-                            <h4>Windows 10 / 11</h4>
-                            <p>Instalación, configuración y soporte completo.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🖥️</div>
-                            <h4>Windows Server</h4>
-                            <p>Configuración y administración básica.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🐧</div>
-                            <h4>Linux</h4>
-                            <p>Instalación y configuración de distribuciones Linux.</p>
-                        </article>
+                        <article class="service-card"><div class="service-card-icon">🪟</div><h4>Windows 10 / 11</h4><p>Instalación, configuración y soporte completo.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🖥️</div><h4>Windows Server</h4><p>Configuración y administración básica.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🐧</div><h4>Linux</h4><p>Instalación y configuración de distribuciones Linux.</p></article>
                     </div>
-
                     <h4 class="service-subtitle">Herramientas</h4>
                     <div class="service-cards">
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">💻</div>
-                            <h4>Visual Studio Code</h4>
-                            <p>Instalación y configuración del editor.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">🗄️</div>
-                            <h4>MySQL</h4>
-                            <p>Instalación y configuración básica.</p>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card-icon" aria-hidden="true">📊</div>
-                            <h4>Microsoft Office</h4>
-                            <p>Instalación completa del paquete Office.</p>
-                        </article>
+                        <article class="service-card"><div class="service-card-icon">💻</div><h4>Visual Studio Code</h4><p>Instalación y configuración del editor.</p></article>
+                        <article class="service-card"><div class="service-card-icon">🗄️</div><h4>MySQL</h4><p>Instalación y configuración básica.</p></article>
+                        <article class="service-card"><div class="service-card-icon">📊</div><h4>Microsoft Office</h4><p>Instalación completa del paquete Office.</p></article>
                     </div>
                 </div>
             </div>
@@ -348,9 +218,7 @@
                 <div class="section-header">
                     <div class="section-badge">💰 Tarifas Referenciales</div>
                     <h2 id="pricing-title" class="section-title">Precios Accesibles y Competitivos</h2>
-                    <p class="section-subtitle">
-                        Los precios pueden variar según el tipo de equipo, complejidad del servicio y ubicación
-                    </p>
+                    <p class="section-subtitle">Los precios pueden variar según el tipo de equipo, complejidad del servicio y ubicación</p>
                 </div>
 
                 <div class="pricing-table-wrapper">
@@ -363,52 +231,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>🔍 Diagnóstico Técnico</td>
-                                <td><span class="price-tag">Q50</span></td>
-                                <td>Análisis completo del equipo para detectar fallas</td>
-                            </tr>
-                            <tr>
-                                <td>🧹 Mantenimiento Preventivo</td>
-                                <td><span class="price-tag">Q100</span></td>
-                                <td>Limpieza, cambio de pasta térmica y optimización</td>
-                            </tr>
-                            <tr>
-                                <td>💿 Formateo e Instalación de Windows</td>
-                                <td><span class="price-tag">Q150</span></td>
-                                <td>Instalación limpia del sistema operativo</td>
-                            </tr>
-                            <tr>
-                                <td>🛡️ Eliminación de Virus</td>
-                                <td><span class="price-tag">Q100</span></td>
-                                <td>Detección y eliminación de amenazas de seguridad</td>
-                            </tr>
-                            <tr>
-                                <td>📶 Configuración de Redes</td>
-                                <td><span class="price-tag">Q150</span></td>
-                                <td>Configuración de red WiFi y LAN</td>
-                            </tr>
-                            <tr>
-                                <td>💻 Instalación de Programas</td>
-                                <td><span class="price-tag">Q75</span></td>
-                                <td>Instalación de software y aplicaciones</td>
-                            </tr>
-                            <tr>
-                                <td>🌐 Soporte Remoto</td>
-                                <td><span class="price-tag">Q50</span></td>
-                                <td>Asistencia técnica a distancia</td>
-                            </tr>
-                            <tr>
-                                <td>🖨️ Configuración de Impresoras</td>
-                                <td><span class="price-tag">Q80</span></td>
-                                <td>Instalación y configuración de impresoras</td>
-                            </tr>
+                            <tr><td>🔍 Diagnóstico Técnico</td><td><span class="price-tag">Q50</span></td><td>Análisis completo del equipo para detectar fallas</td></tr>
+                            <tr><td>🧹 Mantenimiento Preventivo</td><td><span class="price-tag">Q100</span></td><td>Limpieza, cambio de pasta térmica y optimización</td></tr>
+                            <tr><td>💿 Formateo e Instalación de Windows</td><td><span class="price-tag">Q150</span></td><td>Instalación limpia del sistema operativo</td></tr>
+                            <tr><td>🛡️ Eliminación de Virus</td><td><span class="price-tag">Q100</span></td><td>Detección y eliminación de amenazas de seguridad</td></tr>
+                            <tr><td>📶 Configuración de Redes</td><td><span class="price-tag">Q150</span></td><td>Configuración de red WiFi y LAN</td></tr>
+                            <tr><td>💻 Instalación de Programas</td><td><span class="price-tag">Q75</span></td><td>Instalación de software y aplicaciones</td></tr>
+                            <tr><td>🌐 Soporte Remoto</td><td><span class="price-tag">Q50</span></td><td>Asistencia técnica a distancia</td></tr>
+                            <tr><td>🖨️ Configuración de Impresoras</td><td><span class="price-tag">Q80</span></td><td>Instalación y configuración de impresoras</td></tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="pricing-note">
-                    * Precios en Quetzales (GTQ). Sujeto a cambios según complejidad del caso.
-                </p>
+                <p class="pricing-note">* Precios en Quetzales (GTQ). Sujeto a cambios según complejidad del caso.</p>
             </div>
         </section>
 
@@ -418,30 +252,17 @@
                 <div class="section-header">
                     <div class="section-badge">👨‍💻 Sobre Aliado Tecnológico</div>
                     <h2 id="about-title" class="section-title">Nuestra Misión, Visión y Valores</h2>
-                    <p class="section-subtitle">
-                        Brindamos servicios profesionales de soporte técnico e infraestructura informática 
-                        orientados a hogares, estudiantes, pequeños negocios y empresas
-                    </p>
+                    <p class="section-subtitle">Brindamos servicios profesionales de soporte técnico e infraestructura informática orientados a hogares, estudiantes, pequeños negocios y empresas</p>
                 </div>
-
                 <div class="mission-grid">
                     <article class="mission-card mision">
                         <h3>🎯 Nuestra Misión</h3>
-                        <p>
-                            Ser el aliado tecnológico de confianza, ofreciendo soluciones confiables y eficientes 
-                            que permitan a nuestros clientes mantener sus equipos y sistemas funcionando de manera 
-                            óptima, garantizando seguridad, estabilidad y productividad.
-                        </p>
+                        <p>Ser el aliado tecnológico de confianza, ofreciendo soluciones confiables y eficientes que permitan a nuestros clientes mantener sus equipos y sistemas funcionando de manera óptima, garantizando seguridad, estabilidad y productividad.</p>
                     </article>
-
                     <article class="mission-card vision">
                         <h3>👁️ Nuestra Visión</h3>
-                        <p>
-                            Ser reconocidos como el principal aliado tecnológico en Guatemala, destacando por 
-                            la calidad del servicio, la innovación y la confianza de nuestros clientes.
-                        </p>
+                        <p>Ser reconocidos como el principal aliado tecnológico en Guatemala, destacando por la calidad del servicio, la innovación y la confianza de nuestros clientes.</p>
                     </article>
-
                     <article class="mission-card valores">
                         <h3>⭐ Nuestros Valores</h3>
                         <ul class="valores-list">
@@ -464,33 +285,12 @@
                     <div class="section-badge">🚀 ¿Por qué elegir Aliado Tecnológico?</div>
                     <h2 id="why-title" class="section-title">Ventajas de Trabajar con Nosotros</h2>
                 </div>
-
                 <div class="why-grid">
-                    <div class="why-card">
-                        <div class="why-icon" aria-hidden="true">✅</div>
-                        <h4>Atención rápida y personalizada</h4>
-                        <p>Respondemos a tus consultas y solicitudes de manera ágil.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon" aria-hidden="true">🏠</div>
-                        <h4>Soporte presencial y remoto</h4>
-                        <p>Te asistimos donde estés: en tu domicilio, oficina o a distancia.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon" aria-hidden="true">🔒</div>
-                        <h4>Soluciones seguras y eficientes</h4>
-                        <p>Trabajamos con protocolos que garantizan tu seguridad informática.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon" aria-hidden="true">💵</div>
-                        <h4>Precios accesibles</h4>
-                        <p>Servicios de calidad a precios justos y competitivos en Guatemala.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon" aria-hidden="true">🎓</div>
-                        <h4>Experiencia comprobada</h4>
-                        <p>Experiencia en soporte técnico e infraestructura informática.</p>
-                    </div>
+                    <div class="why-card"><div class="why-icon">✅</div><h4>Atención rápida y personalizada</h4><p>Respondemos a tus consultas y solicitudes de manera ágil.</p></div>
+                    <div class="why-card"><div class="why-icon">🏠</div><h4>Soporte presencial y remoto</h4><p>Te asistimos donde estés: en tu domicilio, oficina o a distancia.</p></div>
+                    <div class="why-card"><div class="why-icon">🔒</div><h4>Soluciones seguras y eficientes</h4><p>Trabajamos con protocolos que garantizan tu seguridad informática.</p></div>
+                    <div class="why-card"><div class="why-icon">💵</div><h4>Precios accesibles</h4><p>Servicios de calidad a precios justos y competitivos en Guatemala.</p></div>
+                    <div class="why-card"><div class="why-icon">🎓</div><h4>Experiencia comprobada</h4><p>Experiencia en soporte técnico e infraestructura informática.</p></div>
                 </div>
             </div>
         </section>
@@ -501,98 +301,31 @@
                 <div class="section-header">
                     <div class="section-badge">📞 Contacto</div>
                     <h2 id="contact-title" class="section-title">Contacta a tu Aliado Tecnológico</h2>
-                    <p class="section-subtitle">
-                        Contáctanos para una consulta gratuita. Te responderemos lo antes posible
-                    </p>
+                    <p class="section-subtitle">Contáctanos para una consulta gratuita. Te responderemos lo antes posible</p>
                 </div>
-
                 <div class="contact-grid">
                     <aside class="contact-info">
                         <h3>Información de Contacto</h3>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon" aria-hidden="true">📍</div>
-                            <div class="contact-item-text">
-                                <strong>Ubicación</strong>
-                                <span>Guatemala</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon" aria-hidden="true">📱</div>
-                            <div class="contact-item-text">
-                                <strong>Teléfono</strong>
-                                <span>+502 XXXXXXXX</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon" aria-hidden="true">📧</div>
-                            <div class="contact-item-text">
-                                <strong>Correo Electrónico</strong>
-                                <span>soporte@aliadotecnologico.com</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon" aria-hidden="true">🌐</div>
-                            <div class="contact-item-text">
-                                <strong>Sitio Web</strong>
-                                <span>www.aliadotecnologico.com</span>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-item-icon" aria-hidden="true">🕐</div>
-                            <div class="contact-item-text">
-                                <strong>Horario de Atención</strong>
-                                <span>Lunes a Viernes: 8:00 - 18:00</span>
-                                <span>Soporte remoto 24/7</span>
-                            </div>
-                        </div>
+                        <div class="contact-item"><div class="contact-item-icon">📍</div><div class="contact-item-text"><strong>Ubicación</strong><span>Guatemala</span></div></div>
+                        <div class="contact-item"><div class="contact-item-icon">📱</div><div class="contact-item-text"><strong>Teléfono</strong><span>+502 XXXXXXXX</span></div></div>
+                        <div class="contact-item"><div class="contact-item-icon">📧</div><div class="contact-item-text"><strong>Correo Electrónico</strong><span>soporte@aliadotecnologico.com</span></div></div>
+                        <div class="contact-item"><div class="contact-item-icon">🌐</div><div class="contact-item-text"><strong>Sitio Web</strong><span>www.aliadotecnologico.com</span></div></div>
+                        <div class="contact-item"><div class="contact-item-icon">🕐</div><div class="contact-item-text"><strong>Horario de Atención</strong><span>Lunes a Viernes: 8:00 - 18:00</span><span>Soporte remoto 24/7</span></div></div>
                     </aside>
-
                     <form class="contact-form" id="contactForm" aria-label="Formulario de contacto">
                         <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Nombre completo *</label>
-                                <input type="text" id="name" class="form-input" placeholder="Ingresa tu nombre" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Teléfono</label>
-                                <input type="tel" id="phone" class="form-input" placeholder="+502">
-                            </div>
+                            <div class="form-group"><label for="name">Nombre completo *</label><input type="text" id="name" class="form-input" placeholder="Ingresa tu nombre" required></div>
+                            <div class="form-group"><label for="phone">Teléfono</label><input type="tel" id="phone" class="form-input" placeholder="+502"></div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="email">Correo electrónico *</label>
-                            <input type="email" id="email" class="form-input" placeholder="tucorreo@ejemplo.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">Servicio requerido</label>
+                        <div class="form-group"><label for="email">Correo electrónico *</label><input type="email" id="email" class="form-input" placeholder="tucorreo@ejemplo.com" required></div>
+                        <div class="form-group"><label for="service">Servicio requerido</label>
                             <select id="service" class="form-input">
                                 <option value="">Selecciona un servicio</option>
-                                <option>Diagnóstico Técnico</option>
-                                <option>Mantenimiento Preventivo</option>
-                                <option>Formateo e Instalación</option>
-                                <option>Eliminación de Virus</option>
-                                <option>Configuración de Redes</option>
-                                <option>Instalación de Programas</option>
-                                <option>Soporte Remoto</option>
-                                <option>Configuración de Impresoras</option>
-                                <option>Otro</option>
+                                <option>Diagnóstico Técnico</option><option>Mantenimiento Preventivo</option><option>Formateo e Instalación</option><option>Eliminación de Virus</option><option>Configuración de Redes</option><option>Instalación de Programas</option><option>Soporte Remoto</option><option>Configuración de Impresoras</option><option>Otro</option>
                             </select>
                         </div>
-
-                        <div class="form-group">
-                            <label for="message">Describe tu problema o necesidad *</label>
-                            <textarea id="message" class="form-input" placeholder="Cuéntanos qué necesitas..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-submit">
-                            📩 Enviar Solicitud
-                        </button>
+                        <div class="form-group"><label for="message">Describe tu problema o necesidad *</label><textarea id="message" class="form-input" placeholder="Cuéntanos qué necesitas..." required></textarea></div>
+                        <button type="submit" class="btn-submit">📩 Enviar Solicitud</button>
                     </form>
                 </div>
             </div>
@@ -603,51 +336,24 @@
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="#" class="logo" aria-label="Aliado Tecnológico - Ir al inicio">
-                    <img src="img/logo-footer.png" alt="Aliado Tecnológico" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span class="logo-text-fallback" style="display: none;">Aliado<span>Tecnológico</span></span>
+                <a href="#" class="logo-footer" aria-label="Aliado Tecnológico - Ir al inicio">
+                    <img src="img/logo-footer.png" alt="Aliado Tecnológico" class="logo-footer-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="logo-fallback-footer" style="display: none;">
+                        <span class="logo-word-1-footer">ALIADO</span>
+                        <span class="logo-word-2-footer">TECNOLÓGICO</span>
+                    </div>
                 </a>
-                <p>
-                    Tu aliado tecnológico de confianza en Guatemala. Servicios profesionales de soporte 
-                    técnico e infraestructura informática. Soluciones rápidas, seguras y eficientes para 
-                    hogares y empresas.
-                </p>
+                <p>Tu aliado tecnológico de confianza en Guatemala. Servicios profesionales de soporte técnico e infraestructura informática. Soluciones rápidas, seguras y eficientes para hogares y empresas.</p>
             </div>
-
-            <div>
-                <h4>Servicios</h4>
-                <ul class="footer-links">
-                    <li><a href="#servicios">Soporte Técnico</a></li>
-                    <li><a href="#servicios">Mantenimiento</a></li>
-                    <li><a href="#servicios">Instalación</a></li>
-                    <li><a href="#tarifas">Tarifas</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>Empresa</h4>
-                <ul class="footer-links">
-                    <li><a href="#nosotros">Sobre Nosotros</a></li>
-                    <li><a href="#nosotros">Misión y Visión</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>Legal</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Términos de Servicio</a></li>
-                </ul>
-            </div>
+            <div><h4>Servicios</h4><ul class="footer-links"><li><a href="#servicios">Soporte Técnico</a></li><li><a href="#servicios">Mantenimiento</a></li><li><a href="#servicios">Instalación</a></li><li><a href="#tarifas">Tarifas</a></li></ul></div>
+            <div><h4>Empresa</h4><ul class="footer-links"><li><a href="#nosotros">Sobre Nosotros</a></li><li><a href="#nosotros">Misión y Visión</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+            <div><h4>Legal</h4><ul class="footer-links"><li><a href="#">Política de Privacidad</a></li><li><a href="#">Términos de Servicio</a></li></ul></div>
         </div>
-
         <div class="footer-bottom">
             <p>&copy; 2024 Aliado Tecnológico - Todos los derechos reservados. | Soporte Técnico Profesional en Guatemala 🇬🇹</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>

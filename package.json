@@ -1,7 +1,7 @@
 {
-  "name": "techsupport-gt",
+  "name": "aliado-tecnologico",
   "version": "1.0.0",
-  "description": "Sitio web de soporte técnico profesional en Guatemala",
+  "description": "Aliado Tecnológico - Servicios profesionales de soporte técnico en Guatemala",
   "main": "index.html",
   "scripts": {
     "start": "npx serve .",
@@ -10,13 +10,10 @@
   "keywords": [
     "soporte-tecnico",
     "guatemala",
+    "aliado-tecnologico",
     "reparacion-computadoras",
-    "mantenimiento-pc",
-    "instalacion-windows"
+    "mantenimiento-pc"
   ],
-  "author": "TechSupport GT",
-  "license": "MIT",
-  "devDependencies": {
-    "live-server": "^1.2.2"
-  }
+  "author": "Aliado Tecnológico",
+  "license": "MIT"
 }
