@@ -1,95 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aliado Tecnológico | Soporte Técnico Profesional en Guatemala</title>
-    <meta name="description" content="Aliado Tecnológico - Servicios profesionales de soporte técnico e infraestructura informática en Guatemala. Diagnóstico, mantenimiento, instalación y configuración para hogares, estudiantes y empresas.">
-    <meta name="keywords" content="soporte técnico Guatemala, aliado tecnológico, reparación computadoras, mantenimiento PC, instalación Windows, configuración redes, soporte remoto">
+    <meta name="description"
+        content="Aliado Tecnológico - Servicios profesionales de soporte técnico e infraestructura informática en Guatemala. Diagnóstico, mantenimiento, instalación y configuración.">
+    <meta name="keywords"
+        content="soporte técnico Guatemala, aliado tecnológico, reparación computadoras, mantenimiento PC">
     <meta name="author" content="Aliado Tecnológico">
     <meta name="geo.region" content="GT">
     <meta name="geo.country" content="Guatemala">
-    
-    <!-- Open Graph / Redes Sociales -->
     <meta property="og:title" content="Aliado Tecnológico | Soporte Técnico Profesional">
     <meta property="og:description" content="Servicios de soporte técnico e infraestructura informática en Guatemala">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_GT">
     <meta property="og:image" content="img/logo-og.png">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/favicon.png">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- EmailJS para envío de correos -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
+
 <body>
     <!-- ==================== HEADER ==================== -->
     <header class="header" id="header">
         <div class="nav-container">
-            <a href="#" class="logo" aria-label="Aliado Tecnológico - Ir al inicio">
-                <img src="img/logo.png" 
-                     alt="Aliado Tecnológico" 
-                     class="logo-img"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                
-                <div class="logo-fallback" style="display: none;">
+            <a href="#" class="logo" aria-label="Aliado Tecnológico - Inicio" id="secretLogo">
+                <img src="img/logo.png" alt="Aliado Tecnológico" class="logo-img"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback" style="display:none;">
                     <div class="logo-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="3"></circle>
-                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
                         </svg>
                     </div>
-                    <div class="logo-words">
-                        <span class="logo-word-1">ALIADO</span>
-                        <span class="logo-word-2">TECNOLÓGICO</span>
-                    </div>
+                    <div class="logo-words"><span class="logo-word-1">ALIADO</span><span
+                            class="logo-word-2">TECNOLÓGICO</span></div>
                 </div>
             </a>
 
-            <nav aria-label="Navegación principal">
-                <ul class="nav-menu" id="navMenu" role="menubar">
-                    <li role="none"><a href="#inicio" class="nav-link active" role="menuitem">Inicio</a></li>
-                    <li role="none"><a href="#servicios" class="nav-link" role="menuitem">Servicios</a></li>
-                    <li role="none"><a href="#tarifas" class="nav-link" role="menuitem">Tarifas</a></li>
-                    <li role="none"><a href="#nosotros" class="nav-link" role="menuitem">Nosotros</a></li>
-                    <li role="none"><a href="#contacto" class="nav-link nav-cta" role="menuitem">Solicitar Soporte</a></li>
+            <nav id="publicNav">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio" class="nav-link active" data-nav="home">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link" data-nav="services">Servicios</a></li>
+                    <li><a href="#tarifas" class="nav-link" data-nav="pricing">Tarifas</a></li>
+                    <li><a href="#nosotros" class="nav-link" data-nav="about">Nosotros</a></li>
+                    <li><a href="#contacto" class="nav-link" data-nav="contact">Contacto</a></li>
                 </ul>
             </nav>
 
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Menú de navegación" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <button class="mobile-toggle" id="mobileToggle"
+                aria-label="Menú"><span></span><span></span><span></span></button>
         </div>
     </header>
 
-    <main>
-        <!-- ==================== HERO ==================== -->
-        <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <!-- ==================== SITIO PÚBLICO ==================== -->
+    <div class="main" id="publicSite">
+        <!-- HERO -->
+        <section class="hero" id="inicio">
             <div class="hero-container">
                 <div class="hero-content">
-                    <div class="hero-badge" aria-label="Ubicación">
-                        🇬🇹 Aliado Tecnológico en Guatemala
-                    </div>
-                    <h1 id="hero-title" class="hero-title">
-                        Tu <span>Aliado Tecnológico</span> de Confianza para Hogares y Empresas
-                    </h1>
-                    <p class="hero-desc">
-                        Brindamos servicios profesionales de soporte técnico e infraestructura informática con 
-                        soluciones rápidas, seguras y eficientes. Atención personalizada presencial 
-                        y remota en toda Guatemala.
-                    </p>
-
-                    <div class="hero-stats" aria-label="Estadísticas">
+                    <div class="hero-badge">🇬🇹 Aliado Tecnológico en Guatemala</div>
+                    <h1 class="hero-title">Tu <span>Aliado Tecnológico</span> de Confianza</h1>
+                    <p class="hero-desc">Servicios profesionales de soporte técnico e infraestructura informática.
+                        Soluciones rápidas, seguras y eficientes para hogares y empresas en toda Guatemala.</p>
+                    <div class="hero-stats">
                         <div class="hero-stat">
                             <div class="hero-stat-number" data-counter="5">0</div>
                             <div class="hero-stat-label">Años de Experiencia</div>
                         </div>
                         <div class="hero-stat">
-                            <div class="hero-stat-number" data-counter="500">0</div>
+                            <div class="hero-stat-number" data-counter="0" id="heroClientCount">0</div>
                             <div class="hero-stat-label">Clientes Atendidos</div>
                         </div>
                         <div class="hero-stat">
@@ -97,174 +84,266 @@
                             <div class="hero-stat-label">Soporte Disponible</div>
                         </div>
                     </div>
-
                     <div class="hero-buttons">
-                        <a href="#contacto" class="btn btn-primary">
-                            📞 Solicitar Soporte Ahora
-                        </a>
-                        <a href="#servicios" class="btn btn-outline">
-                            Ver Servicios
-                            <span aria-hidden="true">↓</span>
-                        </a>
+                        <a href="#contacto" class="btn btn-primary">📞 Solicitar Soporte</a>
+                        <a href="#servicios" class="btn btn-outline">Ver Servicios ↓</a>
                     </div>
                 </div>
-
-                <div class="hero-visual" aria-hidden="true">
+                <div class="hero-visual">
                     <div class="hero-card">
-                        <h3>🔧 Servicio Garantizado</h3>
-                        <p>Diagnóstico, reparación y mantenimiento profesional para tu equipo.</p>
+                        <h3>⚡ Soporte Inmediato</h3>
+                        <p>Asistencia técnica rápida y profesional para resolver tus problemas tecnológicos.</p>
                     </div>
                     <div class="hero-card hero-card-alt">
-                        <h3>⚡ Respuesta Rápida</h3>
-                        <p>Soporte presencial y remoto con tiempos de respuesta inmediatos.</p>
+                        <h3>🛡️ Confianza Garantizada</h3>
+                        <p>Más de 5 años de experiencia brindando soluciones confiables en toda Guatemala.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ==================== SERVICIOS ==================== -->
-        <section class="section services" id="servicios" aria-labelledby="services-title">
+        <!-- SERVICIOS -->
+        <section class="section services" id="servicios">
             <div class="section-container">
                 <div class="section-header">
                     <div class="section-badge">🛠️ Nuestros Servicios</div>
-                    <h2 id="services-title" class="section-title">Aliado Tecnológico: Servicios Profesionales</h2>
-                    <p class="section-subtitle">
-                        Ofrecemos soluciones integrales para hogares, estudiantes, pequeños negocios y empresas
-                    </p>
+                    <h2 class="section-title">Servicios Profesionales</h2>
+                    <p class="section-subtitle">Soluciones integrales para hogares, estudiantes, pequeños negocios y
+                        empresas</p>
                 </div>
-
-                <div class="services-nav" role="tablist" aria-label="Categorías de servicios">
-                    <button class="service-tab active" onclick="openServiceTab(event, 'soporte')" role="tab" aria-selected="true" aria-controls="panel-soporte">💻 Soporte Técnico</button>
-                    <button class="service-tab" onclick="openServiceTab(event, 'mantenimiento')" role="tab" aria-selected="false" aria-controls="panel-mantenimiento">🔧 Mantenimiento</button>
-                    <button class="service-tab" onclick="openServiceTab(event, 'instalacion')" role="tab" aria-selected="false" aria-controls="panel-instalacion">🌐 Instalación</button>
-                    <button class="service-tab" onclick="openServiceTab(event, 'tecnologias')" role="tab" aria-selected="false" aria-controls="panel-tecnologias">🖥️ Tecnologías</button>
+                <div class="services-nav">
+                    <button class="service-tab active" onclick="openServiceTab(event,'soporte')">💻 Soporte
+                        Técnico</button>
+                    <button class="service-tab" onclick="openServiceTab(event,'mantenimiento')">🔧
+                        Mantenimiento</button>
+                    <button class="service-tab" onclick="openServiceTab(event,'instalacion')">🌐 Instalación</button>
+                    <button class="service-tab" onclick="openServiceTab(event,'tecnologias')">🖥️ Tecnologías</button>
                 </div>
-
-                <!-- Soporte Técnico -->
-                <div class="service-content active" id="panel-soporte" role="tabpanel">
+                <div class="service-content active" id="panel-soporte">
                     <h3 class="service-content-title">💻 Soporte Técnico Especializado</h3>
-                    <p class="service-content-desc">Ofrecemos asistencia técnica para la solución de problemas relacionados con hardware, software y conectividad.</p>
+                    <p class="service-content-desc">Asistencia técnica para problemas de hardware, software y
+                        conectividad.</p>
                     <div class="service-cards">
-                        <article class="service-card"><div class="service-card-icon">🔍</div><h4>Diagnóstico y reparación</h4><p>Diagnóstico y reparación de fallas en computadoras de escritorio y portátiles.</p></article>
-                        <article class="service-card"><div class="service-card-icon">⚙️</div><h4>Solución de errores</h4><p>Solución de errores en sistemas operativos Windows y Linux.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🛡️</div><h4>Eliminación de virus</h4><p>Eliminación de virus, malware, spyware y software malicioso.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🚀</div><h4>Optimización</h4><p>Optimización y aceleración de equipos para mejor rendimiento.</p></article>
-                        <article class="service-card"><div class="service-card-icon">💾</div><h4>Recuperación de sistemas</h4><p>Recuperación básica de sistemas operativos dañados.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🖥️</div><h4>Soporte remoto y presencial</h4><p>Soporte remoto y presencial según la necesidad del cliente.</p></article>
-                        <article class="service-card"><div class="service-card-icon">👥</div><h4>Configuración de usuarios</h4><p>Configuración de usuarios, permisos y cuentas de sistema.</p></article>
-                        <article class="service-card"><div class="service-card-icon">📦</div><h4>Respaldo de información</h4><p>Respaldo y restauración de información importante.</p></article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🔍</div>
+                            <h4>Diagnóstico</h4>
+                            <p>Detección y reparación de fallas en computadoras de escritorio y portátiles.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🛡️</div>
+                            <h4>Eliminación de virus</h4>
+                            <p>Limpieza de malware, spyware y software malicioso.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🚀</div>
+                            <h4>Optimización</h4>
+                            <p>Aceleración y mejora de rendimiento del sistema.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🖥️</div>
+                            <h4>Soporte remoto</h4>
+                            <p>Asistencia a distancia inmediata y segura.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">💾</div>
+                            <h4>Recuperación</h4>
+                            <p>Rescate de sistemas operativos dañados.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">📦</div>
+                            <h4>Respaldo</h4>
+                            <p>Backup y restauración de información importante.</p>
+                        </article>
                     </div>
                 </div>
-
-                <!-- Mantenimiento -->
-                <div class="service-content" id="panel-mantenimiento" role="tabpanel">
+                <div class="service-content" id="panel-mantenimiento">
                     <h3 class="service-content-title">🔧 Mantenimiento Preventivo y Correctivo</h3>
-                    <p class="service-content-desc">Realizamos mantenimiento especializado para prolongar la vida útil de los equipos y mejorar su rendimiento.</p>
-                    <h4 class="service-subtitle">🟢 Mantenimiento Preventivo</h4>
+                    <p class="service-content-desc">Prolongamos la vida útil de tus equipos con mantenimiento
+                        especializado.</p>
+                    <h4 class="service-subtitle">🟢 Preventivo</h4>
                     <div class="service-cards">
-                        <article class="service-card"><div class="service-card-icon">🧹</div><h4>Limpieza de equipos</h4><p>Limpieza interna y externa de equipos para evitar sobrecalentamiento.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🌡️</div><h4>Cambio de pasta térmica</h4><p>Cambio de pasta térmica en procesadores y tarjetas gráficas.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🌬️</div><h4>Revisión de ventilación</h4><p>Revisión de temperaturas y sistemas de ventilación.</p></article>
-                        <article class="service-card"><div class="service-card-icon">📀</div><h4>Verificación de hardware</h4><p>Verificación de disco duro y memoria RAM.</p></article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🧹</div>
+                            <h4>Limpieza</h4>
+                            <p>Interna y externa de equipos.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🌡️</div>
+                            <h4>Pasta térmica</h4>
+                            <p>Cambio en procesadores y GPU.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">📀</div>
+                            <h4>Verificación</h4>
+                            <p>Disco duro y memoria RAM.</p>
+                        </article>
                     </div>
-                    <h4 class="service-subtitle">🔴 Mantenimiento Correctivo</h4>
+                    <h4 class="service-subtitle">🔴 Correctivo</h4>
                     <div class="service-cards">
-                        <article class="service-card"><div class="service-card-icon">🔩</div><h4>Reparación de hardware</h4><p>Reparación de fallas de hardware detectadas.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🔄</div><h4>Sustitución de componentes</h4><p>Sustitución de componentes dañados por nuevos.</p></article>
-                        <article class="service-card"><div class="service-card-icon">⚠️</div><h4>Problemas de arranque</h4><p>Reparación de problemas de arranque del sistema.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🔬</div><h4>Diagnóstico avanzado</h4><p>Diagnóstico avanzado de equipos con fallas complejas.</p></article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🔩</div>
+                            <h4>Reparación</h4>
+                            <p>Fallas de hardware detectadas.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🔄</div>
+                            <h4>Sustitución</h4>
+                            <p>Componentes dañados.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🔬</div>
+                            <h4>Diagnóstico</h4>
+                            <p>Análisis avanzado de equipos.</p>
+                        </article>
                     </div>
                 </div>
-
-                <!-- Instalación -->
-                <div class="service-content" id="panel-instalacion" role="tabpanel">
+                <div class="service-content" id="panel-instalacion">
                     <h3 class="service-content-title">🌐 Instalación y Configuración</h3>
-                    <p class="service-content-desc">Brindamos instalación y configuración profesional de sistemas, aplicaciones y redes.</p>
+                    <p class="service-content-desc">Instalación profesional de sistemas operativos, aplicaciones y
+                        redes.</p>
                     <div class="service-cards">
-                        <article class="service-card"><div class="service-card-icon">🪟</div><h4>Sistemas Operativos</h4><p>Instalación de sistemas operativos Windows y Linux.</p></article>
-                        <article class="service-card"><div class="service-card-icon">📎</div><h4>Software empresarial</h4><p>Instalación de paquetes de oficina y software empresarial.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🖨️</div><h4>Periféricos</h4><p>Configuración de impresoras y dispositivos periféricos.</p></article>
-                        <article class="service-card"><div class="service-card-icon">📶</div><h4>Redes WiFi y LAN</h4><p>Instalación y configuración de redes WiFi y cableadas.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🖧</div><h4>Servidores</h4><p>Configuración básica de servidores.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🔑</div><h4>Acceso remoto</h4><p>Configuración de acceso remoto seguro.</p></article>
-                        <article class="service-card"><div class="service-card-icon">📷</div><h4>Cámaras de red</h4><p>Instalación de cámaras y dispositivos de red.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🔒</div><h4>Seguridad informática</h4><p>Configuración de antivirus y seguridad informática.</p></article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🪟</div>
+                            <h4>Sistemas Operativos</h4>
+                            <p>Windows 10/11 y Linux.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">📶</div>
+                            <h4>Redes WiFi/LAN</h4>
+                            <p>Configuración completa de red.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🖨️</div>
+                            <h4>Periféricos</h4>
+                            <p>Impresoras y dispositivos.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🔒</div>
+                            <h4>Seguridad</h4>
+                            <p>Antivirus y protección.</p>
+                        </article>
                     </div>
                 </div>
-
-                <!-- Tecnologías -->
-                <div class="service-content" id="panel-tecnologias" role="tabpanel">
+                <div class="service-content" id="panel-tecnologias">
                     <h3 class="service-content-title">🖥️ Tecnologías y Herramientas</h3>
-                    <p class="service-content-desc">Trabajamos con diferentes plataformas y herramientas tecnológicas para garantizar soluciones eficientes.</p>
-                    <h4 class="service-subtitle">Sistemas Operativos</h4>
+                    <p class="service-content-desc">Trabajamos con las mejores plataformas para garantizar soluciones
+                        eficientes.</p>
                     <div class="service-cards">
-                        <article class="service-card"><div class="service-card-icon">🪟</div><h4>Windows 10 / 11</h4><p>Instalación, configuración y soporte completo.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🖥️</div><h4>Windows Server</h4><p>Configuración y administración básica.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🐧</div><h4>Linux</h4><p>Instalación y configuración de distribuciones Linux.</p></article>
-                    </div>
-                    <h4 class="service-subtitle">Herramientas</h4>
-                    <div class="service-cards">
-                        <article class="service-card"><div class="service-card-icon">💻</div><h4>Visual Studio Code</h4><p>Instalación y configuración del editor.</p></article>
-                        <article class="service-card"><div class="service-card-icon">🗄️</div><h4>MySQL</h4><p>Instalación y configuración básica.</p></article>
-                        <article class="service-card"><div class="service-card-icon">📊</div><h4>Microsoft Office</h4><p>Instalación completa del paquete Office.</p></article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🪟</div>
+                            <h4>Windows 10/11</h4>
+                            <p>Soporte completo.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🐧</div>
+                            <h4>Linux</h4>
+                            <p>Distribuciones varias.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">📊</div>
+                            <h4>Microsoft Office</h4>
+                            <p>Instalación completa.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">💻</div>
+                            <h4>VS Code</h4>
+                            <p>Editor de código.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-icon">🗄️</div>
+                            <h4>MySQL</h4>
+                            <p>Bases de datos.</p>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ==================== TARIFAS ==================== -->
-        <section class="section pricing" id="tarifas" aria-labelledby="pricing-title">
+        <!-- TARIFAS -->
+        <section class="section pricing" id="tarifas">
             <div class="section-container">
                 <div class="section-header">
-                    <div class="section-badge">💰 Tarifas Referenciales</div>
-                    <h2 id="pricing-title" class="section-title">Precios Accesibles y Competitivos</h2>
-                    <p class="section-subtitle">Los precios pueden variar según el tipo de equipo, complejidad del servicio y ubicación</p>
+                    <div class="section-badge">💰 Tarifas</div>
+                    <h2 class="section-title">Precios en Quetzales (GTQ)</h2>
+                    <p class="section-subtitle">Los precios pueden variar según complejidad y ubicación</p>
                 </div>
-
                 <div class="pricing-table-wrapper">
-                    <table class="pricing-table" aria-label="Tabla de precios de servicios">
+                    <table class="pricing-table">
                         <thead>
                             <tr>
-                                <th scope="col">Servicio</th>
-                                <th scope="col">Precio Desde</th>
-                                <th scope="col">Descripción</th>
+                                <th>Servicio</th>
+                                <th>Desde</th>
+                                <th>Descripción</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>🔍 Diagnóstico Técnico</td><td><span class="price-tag">Q50</span></td><td>Análisis completo del equipo para detectar fallas</td></tr>
-                            <tr><td>🧹 Mantenimiento Preventivo</td><td><span class="price-tag">Q100</span></td><td>Limpieza, cambio de pasta térmica y optimización</td></tr>
-                            <tr><td>💿 Formateo e Instalación de Windows</td><td><span class="price-tag">Q150</span></td><td>Instalación limpia del sistema operativo</td></tr>
-                            <tr><td>🛡️ Eliminación de Virus</td><td><span class="price-tag">Q100</span></td><td>Detección y eliminación de amenazas de seguridad</td></tr>
-                            <tr><td>📶 Configuración de Redes</td><td><span class="price-tag">Q150</span></td><td>Configuración de red WiFi y LAN</td></tr>
-                            <tr><td>💻 Instalación de Programas</td><td><span class="price-tag">Q75</span></td><td>Instalación de software y aplicaciones</td></tr>
-                            <tr><td>🌐 Soporte Remoto</td><td><span class="price-tag">Q50</span></td><td>Asistencia técnica a distancia</td></tr>
-                            <tr><td>🖨️ Configuración de Impresoras</td><td><span class="price-tag">Q80</span></td><td>Instalación y configuración de impresoras</td></tr>
+                            <tr>
+                                <td>🔍 Diagnóstico Técnico</td>
+                                <td><span class="price-tag">Q50</span></td>
+                                <td>Análisis completo del equipo</td>
+                            </tr>
+                            <tr>
+                                <td>🧹 Mantenimiento Preventivo</td>
+                                <td><span class="price-tag">Q100</span></td>
+                                <td>Limpieza, pasta térmica y optimización</td>
+                            </tr>
+                            <tr>
+                                <td>💿 Formateo e Instalación</td>
+                                <td><span class="price-tag">Q150</span></td>
+                                <td>Instalación limpia de Windows</td>
+                            </tr>
+                            <tr>
+                                <td>🛡️ Eliminación de Virus</td>
+                                <td><span class="price-tag">Q100</span></td>
+                                <td>Detección y eliminación de amenazas</td>
+                            </tr>
+                            <tr>
+                                <td>📶 Configuración de Redes</td>
+                                <td><span class="price-tag">Q150</span></td>
+                                <td>WiFi y LAN</td>
+                            </tr>
+                            <tr>
+                                <td>💻 Instalación de Programas</td>
+                                <td><span class="price-tag">Q75</span></td>
+                                <td>Software y aplicaciones</td>
+                            </tr>
+                            <tr>
+                                <td>🌐 Soporte Remoto</td>
+                                <td><span class="price-tag">Q50</span></td>
+                                <td>Asistencia técnica a distancia</td>
+                            </tr>
+                            <tr>
+                                <td>🖨️ Configuración de Impresoras</td>
+                                <td><span class="price-tag">Q80</span></td>
+                                <td>Instalación y configuración</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="pricing-note">* Precios en Quetzales (GTQ). Sujeto a cambios según complejidad del caso.</p>
+                <p class="pricing-note">* Los precios pueden variar según complejidad y ubicación</p>
             </div>
         </section>
 
-        <!-- ==================== NOSOTROS ==================== -->
-        <section class="section mission" id="nosotros" aria-labelledby="about-title">
+        <!-- NOSOTROS -->
+        <section class="section mission" id="nosotros">
             <div class="section-container">
                 <div class="section-header">
-                    <div class="section-badge">👨‍💻 Sobre Aliado Tecnológico</div>
-                    <h2 id="about-title" class="section-title">Nuestra Misión, Visión y Valores</h2>
-                    <p class="section-subtitle">Brindamos servicios profesionales de soporte técnico e infraestructura informática orientados a hogares, estudiantes, pequeños negocios y empresas</p>
+                    <div class="section-badge">👨‍💻 Nosotros</div>
+                    <h2 class="section-title">Misión, Visión y Valores</h2>
                 </div>
                 <div class="mission-grid">
                     <article class="mission-card mision">
-                        <h3>🎯 Nuestra Misión</h3>
-                        <p>Ser el aliado tecnológico de confianza, ofreciendo soluciones confiables y eficientes que permitan a nuestros clientes mantener sus equipos y sistemas funcionando de manera óptima, garantizando seguridad, estabilidad y productividad.</p>
+                        <h3>🎯 Misión</h3>
+                        <p>Ser el aliado tecnológico de confianza, ofreciendo soluciones confiables y eficientes que
+                            permitan a nuestros clientes mantener sus equipos funcionando de manera óptima.</p>
                     </article>
                     <article class="mission-card vision">
-                        <h3>👁️ Nuestra Visión</h3>
-                        <p>Ser reconocidos como el principal aliado tecnológico en Guatemala, destacando por la calidad del servicio, la innovación y la confianza de nuestros clientes.</p>
+                        <h3>👁️ Visión</h3>
+                        <p>Ser reconocidos como el principal aliado tecnológico en Guatemala, destacando por calidad,
+                            innovación y confianza.</p>
                     </article>
                     <article class="mission-card valores">
-                        <h3>⭐ Nuestros Valores</h3>
+                        <h3>⭐ Valores</h3>
                         <ul class="valores-list">
                             <li>Responsabilidad</li>
                             <li>Honestidad</li>
@@ -278,82 +357,420 @@
             </div>
         </section>
 
-        <!-- ==================== ¿POR QUÉ ELEGIRNOS? ==================== -->
-        <section class="section why-us" aria-labelledby="why-title">
+        <!-- ¿POR QUÉ ELEGIRNOS? -->
+        <section class="section why-us" id="por-que">
             <div class="section-container">
                 <div class="section-header">
-                    <div class="section-badge">🚀 ¿Por qué elegir Aliado Tecnológico?</div>
-                    <h2 id="why-title" class="section-title">Ventajas de Trabajar con Nosotros</h2>
+                    <div class="section-badge">⭐ ¿Por qué elegirnos?</div>
+                    <h2 class="section-title">Ventajas de trabajar con nosotros</h2>
                 </div>
                 <div class="why-grid">
-                    <div class="why-card"><div class="why-icon">✅</div><h4>Atención rápida y personalizada</h4><p>Respondemos a tus consultas y solicitudes de manera ágil.</p></div>
-                    <div class="why-card"><div class="why-icon">🏠</div><h4>Soporte presencial y remoto</h4><p>Te asistimos donde estés: en tu domicilio, oficina o a distancia.</p></div>
-                    <div class="why-card"><div class="why-icon">🔒</div><h4>Soluciones seguras y eficientes</h4><p>Trabajamos con protocolos que garantizan tu seguridad informática.</p></div>
-                    <div class="why-card"><div class="why-icon">💵</div><h4>Precios accesibles</h4><p>Servicios de calidad a precios justos y competitivos en Guatemala.</p></div>
-                    <div class="why-card"><div class="why-icon">🎓</div><h4>Experiencia comprobada</h4><p>Experiencia en soporte técnico e infraestructura informática.</p></div>
+                    <div class="why-card">
+                        <div class="why-icon">⚡</div>
+                        <h4>Respuesta Rápida</h4>
+                        <p>Atención inmediata a tus solicitudes de soporte técnico.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">🔒</div>
+                        <h4>Seguridad</h4>
+                        <p>Tus datos y equipos protegidos con los más altos estándares.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">💼</div>
+                        <h4>Profesionalismo</h4>
+                        <p>Técnicos certificados con amplia experiencia.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">💰</div>
+                        <h4>Precios Justos</h4>
+                        <p>La mejor relación calidad-precio del mercado.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">🌐</div>
+                        <h4>Cobertura</h4>
+                        <p>Servicio en toda Guatemala, presencial y remoto.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ==================== CONTACTO ==================== -->
-        <section class="section contact" id="contacto" aria-labelledby="contact-title">
+        <!-- CONTACTO -->
+        <section class="section contact" id="contacto">
             <div class="section-container">
                 <div class="section-header">
                     <div class="section-badge">📞 Contacto</div>
-                    <h2 id="contact-title" class="section-title">Contacta a tu Aliado Tecnológico</h2>
-                    <p class="section-subtitle">Contáctanos para una consulta gratuita. Te responderemos lo antes posible</p>
+                    <h2 class="section-title">Solicita Soporte Técnico</h2>
+                    <p class="section-subtitle">Contáctanos para una consulta gratuita</p>
                 </div>
                 <div class="contact-grid">
                     <aside class="contact-info">
                         <h3>Información de Contacto</h3>
-                        <div class="contact-item"><div class="contact-item-icon">📍</div><div class="contact-item-text"><strong>Ubicación</strong><span>Guatemala</span></div></div>
-                        <div class="contact-item"><div class="contact-item-icon">📱</div><div class="contact-item-text"><strong>Teléfono</strong><span>En mantenimiento</span></div></div>
-                        <div class="contact-item"><div class="contact-item-icon">📧</div><div class="contact-item-text"><strong>Correo Electrónico</strong><span>aliadotecnologico.gt@gmail.com</span></div></div>
-                        <div class="contact-item"><div class="contact-item-icon">🌐</div><div class="contact-item-text"><strong>Sitio Web</strong><span>www.aliadotecnologico.com</span></div></div>
-                        <div class="contact-item"><div class="contact-item-icon">🕐</div><div class="contact-item-text"><strong>Horario de Atención</strong><span>Lunes a Viernes: 8:00 - 18:00</span><span>Soporte remoto 24/7</span></div></div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-text"><strong>Ubicación</strong><span>Guatemala, Guatemala</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📱</div>
+                            <div class="contact-item-text"><strong>Teléfono</strong><span>+502 XXXXXXXX</span></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📧</div>
+                            <div class="contact-item-text">
+                                <strong>Email</strong><span>aliadotecnologico.gt@gmail.com</span></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🕐</div>
+                            <div class="contact-item-text"><strong>Horario</strong><span>Lun-Vie:
+                                    8:00-18:00</span><span>Soporte remoto 24/7</span></div>
+                        </div>
                     </aside>
-                    <form class="contact-form" id="contactForm" aria-label="Formulario de contacto">
+                    <form class="contact-form" id="contactForm" onsubmit="return handleContactSubmit(event)">
                         <div class="form-row">
-                            <div class="form-group"><label for="name">Nombre completo *</label><input type="text" id="name" class="form-input" placeholder="Ingresa tu nombre" required></div>
-                            <div class="form-group"><label for="phone">Teléfono</label><input type="tel" id="phone" class="form-input" placeholder="+502"></div>
+                            <div class="form-group"><label>Nombre *</label><input type="text" class="form-input"
+                                    id="contactName" placeholder="Tu nombre completo" required></div>
+                            <div class="form-group"><label>Teléfono</label><input type="tel" class="form-input"
+                                    id="contactPhone" placeholder="+502 XXXX XXXX"></div>
                         </div>
-                        <div class="form-group"><label for="email">Correo electrónico *</label><input type="email" id="email" class="form-input" placeholder="tucorreo@ejemplo.com" required></div>
-                        <div class="form-group"><label for="service">Servicio requerido</label>
-                            <select id="service" class="form-input">
-                                <option value="">Selecciona un servicio</option>
-                                <option>Diagnóstico Técnico</option><option>Mantenimiento Preventivo</option><option>Formateo e Instalación</option><option>Eliminación de Virus</option><option>Configuración de Redes</option><option>Instalación de Programas</option><option>Soporte Remoto</option><option>Configuración de Impresoras</option><option>Otro</option>
-                            </select>
+                        <div class="form-group"><label>Email *</label><input type="email" class="form-input"
+                                id="contactEmail" placeholder="tu@email.com" required></div>
+                        <div class="form-group"><label>Servicio</label><select class="form-input" id="contactService">
+                                <option value="">Seleccionar servicio...</option>
+                                <option>Diagnóstico Técnico</option>
+                                <option>Mantenimiento Preventivo</option>
+                                <option>Formateo e Instalación</option>
+                                <option>Eliminación de Virus</option>
+                                <option>Configuración de Redes</option>
+                                <option>Soporte Remoto</option>
+                                <option>Otro</option>
+                            </select></div>
+                        <div class="form-group"><label>Descripción del problema *</label><textarea class="form-input"
+                                id="contactMessage" placeholder="Describe tu problema..." rows="3" required></textarea>
                         </div>
-                        <div class="form-group"><label for="message">Describe tu problema o necesidad *</label><textarea id="message" class="form-input" placeholder="Cuéntanos qué necesitas..." required></textarea></div>
                         <button type="submit" class="btn-submit">📩 Enviar Solicitud</button>
                     </form>
                 </div>
             </div>
         </section>
-    </main>
+    </div>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="footer">
+    <!-- ==================== PANEL ADMIN (OCULTO) ==================== -->
+    <div id="adminPanel" style="display:none;">
+        <div class="admin-layout">
+            <aside class="admin-sidebar" id="adminSidebar">
+                <div class="admin-sidebar-header">
+                    <div class="admin-logo">
+                        <div class="logo-icon-box" style="width:40px;height:40px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white"
+                                stroke-width="2.5">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div style="font-weight:700;color:white;font-size:0.85rem;">ALIADO</div>
+                            <div style="font-size:0.7rem;color:var(--neon-cyan);">TECNOLÓGICO</div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="admin-nav">
+                    <a href="#" class="admin-nav-item active" data-section="overview"><span>📊</span> Dashboard</a>
+                    <a href="#" class="admin-nav-item" data-section="tickets"><span>🎫</span> Solicitudes <span
+                            class="admin-badge" id="badgePending">0</span></a>
+                    <a href="#" class="admin-nav-item" data-section="clients"><span>👥</span> Clientes</a>
+                    <a href="#" class="admin-nav-item admin-role-admin" data-section="services-mgmt"><span>🔧</span>
+                        Servicios</a>
+                    <a href="#" class="admin-nav-item admin-role-admin" data-section="reports"><span>📈</span>
+                        Reportes</a>
+                    <a href="#" class="admin-nav-item admin-role-admin" data-section="settings"><span>⚙️</span>
+                        Configuración</a>
+                </nav>
+                <div class="admin-sidebar-footer">
+                    <div class="admin-user-info">
+                        <div class="admin-avatar" id="adminAvatar">👤</div>
+                        <div>
+                            <div class="admin-user-name" id="adminName">Usuario</div>
+                            <div class="admin-user-role" id="adminRole">Rol</div>
+                        </div>
+                    </div>
+                    <button class="admin-btn-icon" onclick="logoutAdmin()" title="Cerrar sesión">🚪</button>
+                </div>
+            </aside>
+            <div class="admin-main">
+                <header class="admin-topbar">
+                    <button class="admin-menu-toggle" onclick="toggleSidebar()">☰</button>
+                    <div class="admin-topbar-title" id="adminTitle">Dashboard</div>
+                    <div class="admin-topbar-actions">
+                        <button class="admin-btn-icon" onclick="exportToCSV()" title="Exportar a Excel">📥</button>
+                        <button class="admin-btn-icon" id="themeToggle" onclick="toggleTheme()"
+                            title="Cambiar tema">🌓</button>
+                        <span class="admin-clock" id="adminClock">00:00</span>
+                        <button class="btn btn-primary" style="padding:0.5rem 1.2rem;font-size:0.85rem;"
+                            onclick="showPublicSite()">🌐 Ver Sitio</button>
+                    </div>
+                </header>
+                <div class="admin-content">
+                    <!-- Dashboard -->
+                    <section class="admin-section active" id="sec-overview">
+                        <h2 style="color:var(--neon-cyan);margin-bottom:1.5rem;">📊 Dashboard</h2>
+                        <div class="admin-stats">
+                            <div class="admin-stat">
+                                <div class="admin-stat-icon">🎫</div>
+                                <div class="admin-stat-value" id="statTotal">0</div>
+                                <div class="admin-stat-label">Total Solicitudes</div>
+                            </div>
+                            <div class="admin-stat">
+                                <div class="admin-stat-icon">✅</div>
+                                <div class="admin-stat-value" id="statResolved">0</div>
+                                <div class="admin-stat-label">Resueltas</div>
+                            </div>
+                            <div class="admin-stat">
+                                <div class="admin-stat-icon">⏳</div>
+                                <div class="admin-stat-value" id="statPending">0</div>
+                                <div class="admin-stat-label">Pendientes</div>
+                            </div>
+                            <div class="admin-stat">
+                                <div class="admin-stat-icon">👥</div>
+                                <div class="admin-stat-value" id="statClients">0</div>
+                                <div class="admin-stat-label">Clientes</div>
+                            </div>
+                        </div>
+                        <div class="admin-grid-2">
+                            <div class="admin-card">
+                                <h3>📋 Últimas Solicitudes</h3>
+                                <div id="recentTickets"></div>
+                            </div>
+                            <div class="admin-card">
+                                <h3>📊 Servicios Populares</h3>
+                                <div id="popularServices"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tickets -->
+                    <section class="admin-section" id="sec-tickets">
+                        <div class="admin-section-header">
+                            <h2 style="color:var(--neon-cyan);">🎫 Gestión de Solicitudes</h2>
+                            <button class="btn btn-primary" onclick="openModal('ticketModal')"
+                                style="padding:0.6rem 1.5rem;font-size:0.9rem;">+ Nueva</button>
+                        </div>
+                        <div class="admin-filters">
+                            <select id="filterStatus" onchange="refreshTickets()">
+                                <option value="all">Todos</option>
+                                <option value="pending">Pendientes</option>
+                                <option value="in-progress">En Progreso</option>
+                                <option value="resolved">Resueltos</option>
+                            </select>
+                            <select id="filterPriority" onchange="refreshTickets()">
+                                <option value="all">Prioridad</option>
+                                <option value="urgente">Urgente</option>
+                                <option value="alta">Alta</option>
+                                <option value="media">Media</option>
+                                <option value="baja">Baja</option>
+                            </select>
+                            <input type="text" placeholder="🔍 Buscar..." id="searchTicket" oninput="refreshTickets()">
+                        </div>
+                        <div class="table-wrapper">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Cliente</th>
+                                        <th>Servicio</th>
+                                        <th>Prioridad</th>
+                                        <th>Estado</th>
+                                        <th>Fecha</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ticketsBody"></tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Clientes -->
+                    <section class="admin-section" id="sec-clients">
+                        <h2 style="color:var(--neon-cyan);">👥 Clientes</h2>
+                        <div class="table-wrapper">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Email</th>
+                                        <th>Teléfono</th>
+                                        <th>Solicitudes</th>
+                                        <th>Último Contacto</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="clientsBody"></tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Servicios (Admin) -->
+                    <section class="admin-section" id="sec-services-mgmt">
+                        <h2 style="color:var(--neon-cyan);">🔧 Gestión de Servicios</h2>
+                        <div class="admin-card">
+                            <p style="color:var(--gray);">Configuración de servicios, precios y disponibilidad.</p><br>
+                            <div class="form-group"><label style="color:white;">Precio Diagnóstico (Q)</label><input
+                                    type="number" class="form-input" id="priceDiag" value="50"></div>
+                            <div class="form-group"><label style="color:white;">Precio Mantenimiento (Q)</label><input
+                                    type="number" class="form-input" id="priceMant" value="100"></div>
+                            <div class="form-group"><label style="color:white;">Precio Formateo (Q)</label><input
+                                    type="number" class="form-input" id="priceForm" value="150"></div>
+                            <button class="btn btn-primary" onclick="savePrices()">💾 Guardar Precios</button>
+                        </div>
+                    </section>
+
+                    <!-- Reportes (Admin) -->
+                    <section class="admin-section" id="sec-reports">
+                        <h2 style="color:var(--neon-cyan);">📈 Reportes</h2>
+                        <div class="admin-grid-2">
+                            <div class="admin-card">
+                                <h3>📊 Por Estado</h3>
+                                <div id="reportStatus"></div>
+                            </div>
+                            <div class="admin-card">
+                                <h3>📅 Por Mes</h3>
+                                <div id="reportMonth"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Configuración (Admin) -->
+                    <section class="admin-section" id="sec-settings">
+                        <h2 style="color:var(--neon-cyan);">⚙️ Configuración del Sistema</h2>
+                        <div class="admin-card" style="margin-bottom:1rem;">
+                            <h3 style="color:white;">💾 Respaldo y Restauración</h3>
+                            <button class="btn btn-primary" onclick="backupData()">📥 Descargar Respaldo</button>
+                            <button class="btn btn-outline" onclick="document.getElementById('restoreFile').click()"
+                                style="margin-left:0.5rem;">📤 Restaurar Datos</button>
+                            <input type="file" id="restoreFile" accept=".json" style="display:none;"
+                                onchange="restoreData(this)">
+                            <button class="btn btn-primary" onclick="clearAllData()"
+                                style="margin-left:0.5rem;background:var(--danger);">🗑️ Limpiar Todo</button>
+                        </div>
+                        <div class="admin-card">
+                            <h3 style="color:white;">📧 Configuración de Email</h3>
+                            <div class="form-group"><label style="color:white;">Email para notificaciones</label><input
+                                    type="email" class="form-input" id="adminEmail"
+                                    placeholder="aliadotecnologico.gt@gmail.com"></div>
+                            <button class="btn btn-primary" onclick="saveEmailConfig()">💾 Guardar Email</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MODALES ==================== -->
+    <!-- Login -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🔐 Acceso al Panel</h3><button class="modal-close" onclick="closeModal('loginModal')">✕</button>
+            </div>
+            <div id="loginError" class="alert alert-error" style="display:none;">⚠️ Credenciales incorrectas</div>
+            <form id="loginForm" onsubmit="return handleLogin(event)">
+                <div class="form-group"><label>Rol</label><select class="form-input" id="loginRole" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="admin">👨‍💼 Administrador</option>
+                        <option value="support">🔧 Soporte Técnico</option>
+                        <option value="manager">📋 Gestor</option>
+                    </select></div>
+                <div class="form-group"><label>Usuario</label><input type="text" class="form-input" id="loginUser"
+                        required></div>
+                <div class="form-group"><label>Contraseña</label><input type="password" class="form-input"
+                        id="loginPass" required></div>
+                <button type="submit" class="btn-submit">🔓 Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ticket -->
+    <div class="modal" id="ticketModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🎫 Nueva Solicitud</h3><button class="modal-close" onclick="closeModal('ticketModal')">✕</button>
+            </div>
+            <form id="ticketForm" onsubmit="return handleTicketSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group"><label>Nombre *</label><input type="text" class="form-input" id="tName"
+                            required></div>
+                    <div class="form-group"><label>Teléfono</label><input type="tel" class="form-input" id="tPhone">
+                    </div>
+                </div>
+                <div class="form-group"><label>Email</label><input type="email" class="form-input" id="tEmail"></div>
+                <div class="form-group"><label>Servicio *</label><select class="form-input" id="tService" required>
+                        <option value="">Seleccionar...</option>
+                        <option>Diagnóstico Técnico</option>
+                        <option>Mantenimiento</option>
+                        <option>Formateo</option>
+                        <option>Eliminación de Virus</option>
+                        <option>Redes</option>
+                        <option>Soporte Remoto</option>
+                        <option>Otro</option>
+                    </select></div>
+                <div class="form-group"><label>Descripción *</label><textarea class="form-input" id="tDesc" rows="3"
+                        required></textarea></div>
+                <div class="form-group"><label>Prioridad</label><select class="form-input" id="tPriority">
+                        <option value="baja">🟢 Baja</option>
+                        <option value="media" selected>🟡 Media</option>
+                        <option value="alta">🔴 Alta</option>
+                        <option value="urgente">⚡ Urgente</option>
+                    </select></div>
+                <button type="submit" class="btn-submit">✅ Crear Solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="globalOverlay" onclick="closeAllModals()"></div>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/502XXXXXXXX" target="_blank" class="whatsapp-float" title="Chatea por WhatsApp">💬</a>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="publicFooter">
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="#" class="logo-footer" aria-label="Aliado Tecnológico - Ir al inicio">
-                    <img src="img/logo-footer.png" alt="Aliado Tecnológico" class="logo-footer-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="logo-fallback-footer" style="display: none;">
-                        <span class="logo-word-1-footer">ALIADO</span>
-                        <span class="logo-word-2-footer">TECNOLÓGICO</span>
+                <a href="#" class="logo-footer"><img src="img/logo-footer.png" alt="Aliado Tecnológico"
+                        class="logo-footer-img"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <div class="logo-fallback-footer" style="display:none;"><span
+                            class="logo-word-1-footer">ALIADO</span><span class="logo-word-2-footer">TECNOLÓGICO</span>
                     </div>
                 </a>
-                <p>Tu aliado tecnológico de confianza en Guatemala. Servicios profesionales de soporte técnico e infraestructura informática. Soluciones rápidas, seguras y eficientes para hogares y empresas.</p>
+                <p>Tu aliado tecnológico de confianza en Guatemala.</p>
             </div>
-            <div><h4>Servicios</h4><ul class="footer-links"><li><a href="#servicios">Soporte Técnico</a></li><li><a href="#servicios">Mantenimiento</a></li><li><a href="#servicios">Instalación</a></li><li><a href="#tarifas">Tarifas</a></li></ul></div>
-            <div><h4>Empresa</h4><ul class="footer-links"><li><a href="#nosotros">Sobre Nosotros</a></li><li><a href="#nosotros">Misión y Visión</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
-            <div><h4>Legal</h4><ul class="footer-links"><li><a href="#">Política de Privacidad</a></li><li><a href="#">Términos de Servicio</a></li></ul></div>
+            <div>
+                <h4>Servicios</h4>
+                <ul class="footer-links">
+                    <li><a href="#servicios">Soporte Técnico</a></li>
+                    <li><a href="#tarifas">Tarifas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Empresa</h4>
+                <ul class="footer-links">
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Términos</a></li>
+                </ul>
+            </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Aliado Tecnológico - Todos los derechos reservados. | Soporte Técnico Profesional en Guatemala 🇬🇹</p>
+            <p>&copy; 2026 Aliado Tecnológico | Guatemala 🇬🇹</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
